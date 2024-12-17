@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Colores y fuentes-->
+    <SolidColorBrush x:Key="Background_Primario" Color="LightBlue"/>
+    <SolidColorBrush x:Key="Background_Secundario" Color="LightGreen"/>
+    <SolidColorBrush x:Key="Foreground_Primario" Color="Black"/>
+    <SolidColorBrush x:Key="Foreground_Secundario" Color="White"/>
+    <SolidColorBrush x:Key="Foreground_Terciario" Color="DarkGray"/>
+    <FontFamily x:Key="Fuente_Primaria">Bahnschrift</FontFamily>
+    <FontFamily x:Key="Fuente_Secundaria">Arial</FontFamily>
+    <!--#endregion-->
+
+</ResourceDictionary>
