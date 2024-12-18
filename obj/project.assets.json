@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mario\\source\\repos\\CatálogoDeProductos\\CatálogoDeProductos.csproj",
+      "projectUniqueName": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj",
       "projectName": "CatálogoDeProductos",
-      "projectPath": "C:\\Users\\Mario\\source\\repos\\CatálogoDeProductos\\CatálogoDeProductos.csproj",
+      "projectPath": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj",
       "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mario\\source\\repos\\CatálogoDeProductos\\obj\\",
+      "outputPath": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
