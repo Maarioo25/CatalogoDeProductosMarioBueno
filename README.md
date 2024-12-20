@@ -22,6 +22,7 @@ El proyecto está diseñado siguiendo la arquitectura **MVVM**, con la siguiente
 ```plaintext
 CatálogoDeProductos
 ├── Models/          # Modelos de datos (productos, configuraciones, etc.)
+├── Repositories/    # Persistencia de datos.
 ├── ViewModels/      # Lógica de la aplicación y enlace con la vista.
 ├── Views/           # Vistas.
 ├── Resources/       # Estilos y diccionarios de idiomas.
