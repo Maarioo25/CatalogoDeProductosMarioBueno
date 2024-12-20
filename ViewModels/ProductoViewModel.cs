@@ -1,68 +1,56 @@
 ﻿using CatálogoDeProductos.Models;
-using System;
+using CatálogoDeProductos.Repositories;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CatálogoDeProductos.ViewModels
 {
-    internal class ProductoViewModel : ViewModelBase
+    internal class ProductoViewModel
     {
-        private ProductoModel _producto;
-        private List<ProductoModel> _productos;
+        private ProductoRepository _repositorio;
 
         public ProductoViewModel()
         {
-            _producto = new ProductoModel();
-            _productos = new List<ProductoModel> {
-                new ProductoModel { Id = 1, Nombre = "Producto 1", Descripcion = "Descripción del producto 1", Precio = 100, Categoria = new CategoriaModel { Id = 1, Nombre = "Categoría 1", Descripcion = "Descripción de la categoría 1" , Productos = null} },
-                new ProductoModel { Id = 2, Nombre = "Producto 2", Descripcion = "Descripción del producto 2", Precio = 200, Categoria = new CategoriaModel { Id = 2, Nombre = "Categoría 2", Descripcion = "Descripción de la categoría 2" , Productos = null} },
-                new ProductoModel { Id = 3, Nombre = "Producto 3", Descripcion = "Descripción del producto 3", Precio = 300, Categoria = new CategoriaModel { Id = 3, Nombre = "Categoría 3", Descripcion = "Descripción de la categoría 3" , Productos = null} },
-                new ProductoModel { Id = 4, Nombre = "Producto 4", Descripcion = "Descripción del producto 4", Precio = 400, Categoria = new CategoriaModel { Id = 4, Nombre = "Categoría 4", Descripcion = "Descripción de la categoría 4" , Productos = null} },
-                new ProductoModel { Id = 5, Nombre = "Producto 5", Descripcion = "Descripción del producto 5", Precio = 500, Categoria = new CategoriaModel { Id = 5, Nombre = "Categoría 5", Descripcion = "Descripción de la categoría 5" , Productos = null} }
-            };
-
+            _repositorio = new ProductoRepository();
         }
 
-        public ProductoModel Producto
+        public List<ProductoModel> ObtenerProductos()
         {
-            get => _producto;
-            set
+            return _repositorio.GetAll();
+        }
+
+        public ProductoModel? ObtenerProductoPorId(int id)
+        {
+            return _repositorio.GetById(id);
+        }
+
+        public void AgregarProducto(ProductoModel producto)
+        {
+            if (_repositorio.GetById(producto.Id) == null)
             {
-                if (_producto != value)
-                {
-                    _producto = value;
-                    OnPropertyChanged(nameof(Producto));
-                }
+                _repositorio.Add(producto);
+            }
+            else
+            {
+                _repositorio.Update(producto);
             }
         }
 
-        public List<ProductoModel> Productos
+        public void EliminarProducto(ProductoModel producto)
         {
-            get => _productos;
-            set
+            if (_repositorio.GetById(producto.Id) != null)
             {
-                if (_productos != value)
-                {
-                    _productos = value;
-                    OnPropertyChanged(nameof(Productos));
-                }
+                _repositorio.Delete(producto);
             }
         }
 
-        public void AgregarProducto(Object Producto)
+        public void EditarProducto(ProductoModel producto)
         {
-            _productos.Add((ProductoModel)Producto);
-            OnPropertyChanged(nameof(Productos));
+            if (_repositorio.GetById(producto.Id) != null)
+            {
+                _repositorio.Update(producto);
+            }
         }
 
-        public void EliminarProducto(Object Producto)
-        {
-            _productos.Remove((ProductoModel)Producto);
-            OnPropertyChanged(nameof(Productos));
-        }
+
     }
 }
