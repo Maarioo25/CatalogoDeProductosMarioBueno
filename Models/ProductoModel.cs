@@ -12,7 +12,17 @@ namespace CatálogoDeProductos.Models
         private string _nombre;
         private string _descripcion;
         private double _precio;
-        private CategoriaModel _categoria;
+        private int _idCategoria;
+
+
+        public ProductoModel(int id, string nombre, string descripcion, double precio, int idCategoria)
+        {
+            Id = id;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Precio = precio;
+            IdCategoria = idCategoria;
+        }
 
 
         public int Id {
@@ -71,14 +81,18 @@ namespace CatálogoDeProductos.Models
                 }
             }
         }
-        public CategoriaModel Categoria
+        public int IdCategoria
         {
-            get => _categoria;
+            get => _idCategoria;
             set
             {
-                if (_categoria != value)
+                if (int.IsNegative(value))
                 {
-                    _categoria = value;
+                    throw new Exception("El ID de la categoría no puede ser negativo");
+                }
+                else if (_idCategoria != value)
+                {
+                    _idCategoria = value;
                 }
             }
         }

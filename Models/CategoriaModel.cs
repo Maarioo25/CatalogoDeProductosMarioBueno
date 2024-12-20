@@ -13,6 +13,14 @@ namespace CatálogoDeProductos.Models
         private string _descripcion;
         private List<ProductoModel> _productos;
 
+        public CategoriaModel(int id, string nombre, string descripcion)
+        {
+            Id = id;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Productos = new List<ProductoModel>();
+        }
+
         public int Id
         {
             get => _id;
