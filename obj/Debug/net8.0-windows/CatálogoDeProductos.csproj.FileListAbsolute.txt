@@ -44,14 +44,11 @@ C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\bin\Debug\net8.0-windows\es
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\bin\Debug\net8.0-windows\fr\CatálogoDeProductos.resources.dll
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\Resources\Styles.baml
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\Views\SecondView.g.cs
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\CatálogoDeProductos_MarkupCompile.cache
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\CatálogoDeProductos_MarkupCompile.lref
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\App.baml
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\Views\SecondView.baml
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\CatálogoDeProductos.g.resources
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\CatálogoDeProductos.Resources.Resources.resources
 C:\Users\Mario\Desktop\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\CatálogoDeProductos.Resources.Resources.en.resources

@@ -3,9 +3,9 @@
 
     <!--#region Colores Dark-->
     <SolidColorBrush x:Key="Background_Primario_Dark" Color="#202020"/>
-    <SolidColorBrush x:Key="Background_Secundario_Dark" Color="#282424"/>
-    <SolidColorBrush x:Key="Foreground_Primario_Dark" Color="White"/>
-    <SolidColorBrush x:Key="Foreground_Secundario_Dark" Color="DarkGray"/>
+    <SolidColorBrush x:Key="Background_Secundario_Dark" Color="#292929"/>
+    <SolidColorBrush x:Key="Foreground_Primario_Dark" Color="#555555"/>
+    <SolidColorBrush x:Key="Foreground_Secundario_Dark" Color="#999999"/>
     <!--#endregion-->
     
     <!--#region Colores Light-->
