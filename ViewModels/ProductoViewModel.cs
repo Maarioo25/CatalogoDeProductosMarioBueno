@@ -7,7 +7,6 @@ namespace CatálogoDeProductos.ViewModels
     internal class ProductoViewModel
     {
         private ProductoRepository _repositorio;
-
         public ProductoViewModel()
         {
             _repositorio = new ProductoRepository();
@@ -50,7 +49,5 @@ namespace CatálogoDeProductos.ViewModels
                 _repositorio.Update(producto);
             }
         }
-
-
     }
 }

@@ -7,18 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\SecondView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\SecondView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
