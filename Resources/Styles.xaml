@@ -14,10 +14,5 @@
     <SolidColorBrush x:Key="Foreground_Primario_Light" Color="Black"/>
     <SolidColorBrush x:Key="Foreground_Secundario_Light" Color="DarkGray"/>
     <!--#endregion-->
-    
-    <!--#region Fuentes-->
-    <FontFamily x:Key="Fuente_Primaria">Bahnschrift</FontFamily>
-    <FontFamily x:Key="Fuente_Secundaria">Arial</FontFamily>
-    <!--#endregion-->
 
 </ResourceDictionary>

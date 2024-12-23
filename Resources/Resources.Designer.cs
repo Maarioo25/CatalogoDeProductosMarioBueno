@@ -22,7 +22,7 @@ namespace CatálogoDeProductos.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace CatálogoDeProductos.Resources {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CatálogoDeProductos.Resources.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace CatálogoDeProductos.Resources {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,11 +61,119 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Hello.
+        ///   Busca una cadena traducida similar a Categories.
         /// </summary>
-        internal static string txtHello {
+        public static string btnCategorias {
             get {
-                return ResourceManager.GetString("txtHello", resourceCulture);
+                return ResourceManager.GetString("btnCategorias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Light.
+        /// </summary>
+        public static string btnClaro {
+            get {
+                return ResourceManager.GetString("btnClaro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Configuration.
+        /// </summary>
+        public static string btnConfiguracion {
+            get {
+                return ResourceManager.GetString("btnConfiguracion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Home.
+        /// </summary>
+        public static string btnInicio {
+            get {
+                return ResourceManager.GetString("btnInicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dark.
+        /// </summary>
+        public static string btnOscuro {
+            get {
+                return ResourceManager.GetString("btnOscuro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Products.
+        /// </summary>
+        public static string btnProductos {
+            get {
+                return ResourceManager.GetString("btnProductos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Exit.
+        /// </summary>
+        public static string btnSalir {
+            get {
+                return ResourceManager.GetString("btnSalir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Product Catalog.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Categories View.
+        /// </summary>
+        public static string txtCategoriasView {
+            get {
+                return ResourceManager.GetString("txtCategoriasView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Configuration View.
+        /// </summary>
+        public static string txtConfiguracionView {
+            get {
+                return ResourceManager.GetString("txtConfiguracionView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Home.
+        /// </summary>
+        public static string txtInicioView {
+            get {
+                return ResourceManager.GetString("txtInicioView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Products View.
+        /// </summary>
+        public static string txtProductosView {
+            get {
+                return ResourceManager.GetString("txtProductosView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Theme.
+        /// </summary>
+        public static string txtTema {
+            get {
+                return ResourceManager.GetString("txtTema", resourceCulture);
             }
         }
     }

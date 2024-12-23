@@ -7,10 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\CategoriasView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ConfiguracionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\InicioView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ProductosView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CategoriasView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ConfiguracionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InicioView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProductosView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
