@@ -1,62 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\",
+  "WorkspaceRootPath": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\views\\inicioview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:views\\inicioview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\cat\u00E1logodeproductos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:cat\u00E1logodeproductos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\repositories\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:repositories\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\viewmodels\\categoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:viewmodels\\categoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\models\\categoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:models\\categoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductosmariobueno\\models\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:models\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\views\\productosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:views\\productosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,193 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.g.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "RelativeToolTip": "obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T02:47:17.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-21T00:48:03.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T00:33:07.793Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-16T22:04:03.982Z",
+              "WhenOpened": "2024-12-23T03:36:03.12Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CategoriaModel.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Models\\CategoriaModel.cs",
-              "RelativeDocumentMoniker": "Models\\CategoriaModel.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Models\\CategoriaModel.cs",
-              "RelativeToolTip": "Models\\CategoriaModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T23:29:49.044Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Resources\\Styles.xaml",
-              "RelativeDocumentMoniker": "Resources\\Styles.xaml",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Resources\\Styles.xaml",
-              "RelativeToolTip": "Resources\\Styles.xaml",
+              "Title": "InicioView.xaml",
+              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\InicioView.xaml",
+              "RelativeDocumentMoniker": "Views\\InicioView.xaml",
+              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\InicioView.xaml",
+              "RelativeToolTip": "Views\\InicioView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-16T23:25:34.249Z",
+              "WhenOpened": "2024-12-23T03:36:00.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProductoModel.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Models\\ProductoModel.cs",
-              "RelativeDocumentMoniker": "Models\\ProductoModel.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Models\\ProductoModel.cs",
-              "RelativeToolTip": "Models\\ProductoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T23:27:44.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cat\u00E1logoDeProductos.csproj",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Cat\u00E1logoDeProductos.csproj",
-              "RelativeDocumentMoniker": "Cat\u00E1logoDeProductos.csproj",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Cat\u00E1logoDeProductos.csproj",
-              "RelativeToolTip": "Cat\u00E1logoDeProductos.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-16T22:49:31.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IRepository.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\IRepository.cs",
-              "RelativeToolTip": "Repositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:24:25.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\ViewModels\\ProductoViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProductoViewModel.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\ViewModels\\ProductoViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ProductoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T00:10:11.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T23:24:34.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\CategoriaRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\CategoriaRepository.cs",
-              "RelativeToolTip": "Repositories\\CategoriaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:19:15.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\ProductoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProductoRepository.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\Repositories\\ProductoRepository.cs",
-              "RelativeToolTip": "Repositories\\ProductoRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:26:24.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CategoriaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\ViewModels\\CategoriaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\CategoriaViewModel.cs",
-              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductosMarioBueno\\ViewModels\\CategoriaViewModel.cs",
-              "RelativeToolTip": "ViewModels\\CategoriaViewModel.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowDoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:23:33.62Z"
+              "DocumentIndex": 2,
+              "Title": "ProductosView.xaml",
+              "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\ProductosView.xaml",
+              "RelativeDocumentMoniker": "Views\\ProductosView.xaml",
+              "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\ProductosView.xaml",
+              "RelativeToolTip": "Views\\ProductosView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T03:35:58.874Z",
+              "EditorCaption": ""
             }
           ]
         }

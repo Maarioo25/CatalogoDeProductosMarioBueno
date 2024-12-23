@@ -6,8 +6,31 @@
         xmlns:local="clr-namespace:CatálogoDeProductos"
         xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200" ResizeMode="CanResize"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        Title="MainWindow" Height="700" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Borde" Background="{DynamicResource Background_Secundario_Dark}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="10" BorderThickness="0">
+                            <Border.Effect>
+                                <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10" />
+                            </Border.Effect>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Borde" Property="Effect" Value="{x:Null}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
 
     <Border Background="{DynamicResource Background_Primario_Dark}" CornerRadius="20" BorderThickness="5">
         <Grid>
@@ -16,8 +39,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border Background="{DynamicResource Foreground_Primario_Dark}" CornerRadius="20,20,0,0" Grid.Row="0" MouseDown="Header_MouseDown">
-                <Grid VerticalAlignment="Top" Height="75">
+            <Border Background="{DynamicResource Foreground_Primario_Dark}" CornerRadius="20,20,0,0" Grid.Row="0" MouseDown="Arrastrar_Cabecera">
+                <Grid VerticalAlignment="Top" Height="75" Margin="0,0,10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" MaxWidth="250"/>
                         <ColumnDefinition Width="*"/>
@@ -26,21 +49,29 @@
                         <ColumnDefinition Width="40"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Text="Catálogo de Productos" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="22"/>
-                    <Border Grid.Column="1" Background="{DynamicResource Foreground_Secundario_Dark}" CornerRadius="10" Margin="30,0,30,0" Height="45">
+                    <TextBlock Grid.Column="0" Text="{x:Static resources:Resources.Title}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="22">
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Border Grid.Column="1" Background="{DynamicResource Foreground_Secundario_Dark}" CornerRadius="10" Margin="30,0,30,0" Height="45" >
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="50"/>
                             </Grid.ColumnDefinitions>
                             <TextBox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" Padding="10"/>
-                            <Image Grid.Column="1" Stretch="Uniform" Source="/Assets/Icons/lupa.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="40"/>
+                            <Image Grid.Column="1" Stretch="Uniform" Source="Assets/Icons/Buscar.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="40"/>
+
                         </Grid>
 
                     </Border>
-                    <Button Grid.Column="2" Content="—" HorizontalAlignment="Right" Width="40" Height="30"  Background="Transparent" Margin="0,0,0,0" Foreground="White" FontSize="18" BorderThickness="0" Click="MinimizarButton_Click"/>
-                    <Button Grid.Column="3" Content="◻" HorizontalAlignment="Right" Width="40" Height="30"  Background="Transparent" Margin="0,0,0,0" Foreground="White" FontSize="18" BorderThickness="0" Click="MaximizarButton_Click"/>
-                    <Button Grid.Column="4" Content="X" HorizontalAlignment="Right" Width="35" Height="30"  Background="Transparent" Margin="0,0,5,0" Foreground="Red"   FontSize="18" BorderThickness="0" Click="CerrarButton_Click"/>
+                    <Button Grid.Column="2" Content="—" Background="Transparent" Height="30" Foreground="White" FontSize="15" Click="MinimizarButton_Click" Margin="6"/>
+                    <Button Grid.Column="3" Content="◻" Background="Transparent" Height="30" Foreground="White" FontSize="15" Click="MaximizarButton_Click" Margin="6"/>
+                    <Button Grid.Column="4" Content="X" Background="Transparent" Height="30" Foreground="Red"   FontSize="15" Click="CerrarButton_Click" Margin="6"/>
                 </Grid>
             </Border>
 
@@ -59,21 +90,86 @@
                             <RowDefinition Height="75px"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="75px"/>
+                            <RowDefinition Height="75px"/>
                         </Grid.RowDefinitions>
+                        <Rectangle Grid.Row="0" RadiusX="20" RadiusY="20" Margin="10">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="Assets/Images/Imagen.png" />
+                            </Rectangle.Fill>
+                        </Rectangle>
 
-                        <Image Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="100"/>
-                        <Button Grid.Row="1" Content="Inicio" Background="Transparent" Foreground="White" FontSize="16" FontWeight="Bold" BorderThickness="0" />
+                        <Grid x:Name="BordeInicio" Grid.Row="1">
+                            <Grid.Effect>
+                                <DropShadowEffect/>
+                            </Grid.Effect>
+                            <Button x:Name="btnInicio" Grid.Column="1" Margin="10" Click="btnInicio_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Assets/Icons/Home_Dark.png" Height="20" Width="20" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{x:Static resources:Resources.btnInicio}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid x:Name="BordeProductos" Grid.Row="2">
+                            <Grid.Effect>
+                                <DropShadowEffect/>
+                            </Grid.Effect>
+                            <Button x:Name="btnProductos" Margin="10" Click="btnProductos_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Assets/Icons/Productos_Dark.png" Height="20" Width="20" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{x:Static resources:Resources.btnProductos}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid x:Name="BordeCategorias" Grid.Row="3">
+                            <Grid.Effect>
+                                <DropShadowEffect/>
+                            </Grid.Effect>
+                            <Button x:Name="btnCategorias" Margin="10" Click="btnCategorias_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Assets/Icons/Categorias_Dark.png" Height="20" Width="20" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{x:Static resources:Resources.btnCategorias}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid x:Name="BordeConfiguracion" Grid.Row="5">
+                            <Grid.Effect>
+                                <DropShadowEffect/>
+                            </Grid.Effect>
+                            <Button x:Name="btnConfiguracion" Margin="10" Click="btnConfiguracion_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Assets/Icons/Configuracion_Dark.png" Height="20" Width="20" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{x:Static resources:Resources.btnConfiguracion}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <Grid x:Name="BordeSalir" Grid.Row="6">
+                            <Grid.Effect>
+                                <DropShadowEffect/>
+                            </Grid.Effect>
+                            <Button x:Name="btnSalir" Margin="10" Click="btnSalir_Click">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="Assets/Icons/Salir_Dark.png" Height="20" Width="20" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{x:Static resources:Resources.btnSalir}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Border>
 
                 <Border Grid.Column="1" Background="{DynamicResource Background_Primario_Dark}" CornerRadius="0,0,20,0">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Border Grid.Row="1" Background="{DynamicResource Background_Secundario_Dark}" CornerRadius="0,0,20,0">
-
+                        <Border Background="{DynamicResource Background_Secundario_Dark}" CornerRadius="0,0,20,0">
+                            <ContentControl x:Name="MainContent"/>
                         </Border>
                     </Grid>
                 </Border>
