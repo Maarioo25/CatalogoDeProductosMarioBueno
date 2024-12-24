@@ -19,15 +19,11 @@ namespace CatálogoDeProductos
     {
         public MainWindow()
         {
-            Idioma("en");
             InitializeComponent();
+            resetearBordes();
             BordeInicio.Effect = null;
             MainContent.Content = new InicioView();
-        }
-
-        private static void Idioma(String idioma)
-        {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(idioma);
+            
         }
 
         private void Arrastrar_Cabecera(object sender, MouseButtonEventArgs e)
@@ -93,7 +89,7 @@ namespace CatálogoDeProductos
             this.Close();
         }
 
-        private void resetearBordes()
+        public void resetearBordes()
         {
             BordeInicio.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
             BordeProductos.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };

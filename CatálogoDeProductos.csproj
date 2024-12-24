@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Resources\Resources.de.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Assets\Icons\Buscar.png" />
     <None Remove="Assets\Icons\Categorias_Dark.png" />
     <None Remove="Assets\Icons\Categorias_Light.png" />
@@ -63,7 +59,6 @@
     <Resource Include="Assets\Images\Imagen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Resources.de.resx" />
   </ItemGroup>
 
   <ItemGroup>

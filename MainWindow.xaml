@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CatálogoDeProductos"
         xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        Title="MainWindow" Height="700" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <Style TargetType="Button">
@@ -49,7 +49,7 @@
                         <ColumnDefinition Width="40"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Text="{x:Static resources:Resources.Title}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="22">
+                    <TextBlock x:Name="Titulo" Grid.Column="0" Text="{x:Static resources:Resources.Title}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="22">
                         <TextBlock.Effect>
                             <DropShadowEffect/>
                         </TextBlock.Effect>

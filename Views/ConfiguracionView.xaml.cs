@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CatálogoDeProductos.Views
 {
@@ -22,23 +10,104 @@ namespace CatálogoDeProductos.Views
         public ConfiguracionView()
         {
             InitializeComponent();
-            resetearBordes();
+            resetearBordesTheme();
+            resetearBordesLanguaje();
+            setLanguajeSeleccionado();
+            setThemeSeleccionado();
+        }
+
+        private void setThemeSeleccionado()
+        {
+            //throw new System.NotImplementedException();
+        }
+
+        private void setLanguajeSeleccionado()
+        {
+            if (Thread.CurrentThread.CurrentUICulture.Name == "es")
+            {
+                btnEsp.Effect = null;
+            }
+            else if (Thread.CurrentThread.CurrentUICulture.Name == "en")
+            {
+                btnEng.Effect = null;
+            }
+            else if (Thread.CurrentThread.CurrentUICulture.Name == "fr")
+            {
+                btnFra.Effect = null;
+            }
+            else if (Thread.CurrentThread.CurrentUICulture.Name == "de")
+            {
+                btnAle.Effect = null;
+            }
         }
 
         private void btnClaro_Click(object sender, RoutedEventArgs e)
         {
-            
+            resetearBordesTheme();
+            btnClaro.Effect = null;
         }
 
         private void btnOscuro_Click(object sender, RoutedEventArgs e)
         {
-            
+            resetearBordesTheme();
+            btnOscuro.Effect = null;
         }
 
-        private void resetearBordes()
+        private void resetearBordesTheme()
         {
             btnClaro.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
             btnOscuro.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
+        }
+
+        private void btnEsp_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshWindow("es");
+            resetearBordesLanguaje();
+            btnEsp.Effect = null;
+
+        }
+
+        private void btnEng_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshWindow("en");
+            resetearBordesLanguaje();
+            btnEng.Effect = null;
+
+        }
+
+        private void btnFra_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshWindow("fr");
+            resetearBordesLanguaje();
+            btnFra.Effect = null;
+        }
+
+        private void btnAle_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshWindow("de");
+            resetearBordesLanguaje();
+            btnAle.Effect = null;
+        }
+
+        private void resetearBordesLanguaje()
+        {
+            btnEsp.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
+            btnEng.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
+            btnFra.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
+            btnAle.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
+        }
+
+        private void RefreshWindow(string culture)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture);
+            MainWindow newWindow = new MainWindow();
+            newWindow.MainContent.Content = new ConfiguracionView();
+            newWindow.Show();
+            Application.Current.MainWindow.Close();
+            Application.Current.MainWindow = newWindow;
+            newWindow.resetearBordes();
+            newWindow.BordeConfiguracion.Effect = null;
         }
     }
 }

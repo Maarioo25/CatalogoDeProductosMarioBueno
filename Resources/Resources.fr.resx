@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnAle" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
   <data name="btnCategorias" xml:space="preserve">
     <value>Catégories</value>
   </data>
@@ -125,6 +128,15 @@
   </data>
   <data name="btnConfiguracion" xml:space="preserve">
     <value>Paramètres</value>
+  </data>
+  <data name="btnEng" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="btnEsp" xml:space="preserve">
+    <value>Espagnol</value>
+  </data>
+  <data name="btnFra" xml:space="preserve">
+    <value>Français</value>
   </data>
   <data name="btnInicio" xml:space="preserve">
     <value>Accueil</value>
@@ -149,6 +161,9 @@
   </data>
   <data name="txtInicioView" xml:space="preserve">
     <value>Vue Accueil</value>
+  </data>
+  <data name="txtLenguaje" xml:space="preserve">
+    <value>Langue</value>
   </data>
   <data name="txtProductosView" xml:space="preserve">
     <value>Vue Produits</value>
