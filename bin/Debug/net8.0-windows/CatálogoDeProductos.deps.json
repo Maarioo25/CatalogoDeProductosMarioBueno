@@ -11,6 +11,9 @@
           "CatálogoDeProductos.dll": {}
         },
         "resources": {
+          "de/CatálogoDeProductos.resources.dll": {
+            "locale": "de"
+          },
           "en/CatálogoDeProductos.resources.dll": {
             "locale": "en"
           },

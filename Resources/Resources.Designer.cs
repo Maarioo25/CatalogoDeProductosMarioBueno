@@ -61,6 +61,15 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a German.
+        /// </summary>
+        public static string btnAle {
+            get {
+                return ResourceManager.GetString("btnAle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Categories.
         /// </summary>
         public static string btnCategorias {
@@ -79,11 +88,38 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Configuration.
+        ///   Busca una cadena traducida similar a Settings.
         /// </summary>
         public static string btnConfiguracion {
             get {
                 return ResourceManager.GetString("btnConfiguracion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a English.
+        /// </summary>
+        public static string btnEng {
+            get {
+                return ResourceManager.GetString("btnEng", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Spanish.
+        /// </summary>
+        public static string btnEsp {
+            get {
+                return ResourceManager.GetString("btnEsp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a French.
+        /// </summary>
+        public static string btnFra {
+            get {
+                return ResourceManager.GetString("btnFra", resourceCulture);
             }
         }
         
@@ -142,7 +178,7 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Configuration View.
+        ///   Busca una cadena traducida similar a Settings View.
         /// </summary>
         public static string txtConfiguracionView {
             get {
@@ -156,6 +192,15 @@ namespace CatálogoDeProductos.Resources {
         public static string txtInicioView {
             get {
                 return ResourceManager.GetString("txtInicioView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Languaje.
+        /// </summary>
+        public static string txtLenguaje {
+            get {
+                return ResourceManager.GetString("txtLenguaje", resourceCulture);
             }
         }
         
