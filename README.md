@@ -38,11 +38,9 @@ CatálogoDeProductos
 - **Vistas disponibles:**
   - **Inicio**: Información general del catálogo.
   - **Productos**: Gestión y visualización del catálogo de productos.
-  - **Configuración (Settings)**: Permite cambiar el idioma de la aplicación.
-
-### Personalización de Botones
-- Botones del menú lateral con un diseño personalizado.
-- Los botones funcionan como `RadioButton`, asegurando que solo una vista esté activa a la vez.
+  - **Categorias**: Gestión y visualización de la lista de categorías.
+  - **Configuración**: Permite cambiar el tema y el idioma de la aplicación.
+  - **Salir**: Cierra la aplicación.
 
 ### Estilos y Diseño
 - La aplicación utiliza un esquema de colores personalizado.
@@ -56,6 +54,6 @@ CatálogoDeProductos
 - Cambia el idioma desde la página de **Configuración**.
 - Las etiquetas y textos se actualizan automáticamente según el idioma seleccionado.
 
-### Animaciones (Opcional)
+### Animaciones
 - Las transiciones entre vistas son fluidas y dinámicas.
 - Botones y elementos interactivos cuentan con animaciones sutiles que mejoran la experiencia de usuario.
