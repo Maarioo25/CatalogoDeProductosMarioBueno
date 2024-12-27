@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:views\\configuracionview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72E96041-2228-4420-AE43-202A51B4A0FC}|Cat\u00E1logoDeProductos.csproj|c:\\users\\mario\\desktop\\catalogodeproductos\\views\\configuracionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -90,12 +90,11 @@
               "RelativeToolTip": "Repositories\\ProductoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:20.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:20.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Resources\\Styles.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles.xaml",
@@ -113,14 +112,14 @@
               "RelativeDocumentMoniker": "Views\\ConfiguracionView.xaml.cs",
               "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\ConfiguracionView.xaml.cs",
               "RelativeToolTip": "Views\\ConfiguracionView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAuwHIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T03:47:39.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -140,12 +139,11 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T23:52:35.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T23:52:35.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -165,8 +163,7 @@
               "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\ConfiguracionView.xaml",
               "RelativeToolTip": "Views\\ConfiguracionView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T22:56:15.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:56:15.073Z"
             },
             {
               "$type": "Document",
@@ -178,8 +175,7 @@
               "RelativeToolTip": "Repositories\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:21.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:21.381Z"
             },
             {
               "$type": "Document",
@@ -203,8 +199,7 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T23:53:44.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T23:53:44.808Z"
             },
             {
               "$type": "Document",
@@ -216,8 +211,7 @@
               "RelativeToolTip": "Repositories\\CategoriaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:22.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:22.421Z"
             },
             {
               "$type": "Document",
@@ -229,8 +223,7 @@
               "RelativeToolTip": "Models\\ProductoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:23.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:23.901Z"
             },
             {
               "$type": "Document",
@@ -242,8 +235,7 @@
               "RelativeToolTip": "ViewModels\\CategoriaViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:16.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:16.778Z"
             },
             {
               "$type": "Document",
@@ -255,8 +247,7 @@
               "RelativeToolTip": "ViewModels\\ProductoViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T22:55:15.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T22:55:15.783Z"
             },
             {
               "$type": "Document",
@@ -267,8 +258,7 @@
               "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\InicioView.xaml",
               "RelativeToolTip": "Views\\InicioView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T03:36:00.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T03:36:00.986Z"
             },
             {
               "$type": "Document",
@@ -279,8 +269,7 @@
               "ToolTip": "C:\\Users\\Mario\\Desktop\\CatalogoDeProductos\\Views\\ProductosView.xaml",
               "RelativeToolTip": "Views\\ProductosView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T03:35:58.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T03:35:58.874Z"
             }
           ]
         }
