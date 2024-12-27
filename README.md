@@ -20,15 +20,15 @@ Esta es una aplicación de escritorio desarrollada en **WPF** siguiendo el patr�
 El proyecto está diseñado siguiendo la arquitectura **MVVM**, con la siguiente estructura:
 
 ```plaintext
-CatálogoDeProductos
 ├── Models/          # Modelos de datos (productos, categorías, etc.)
-├── ViewModels/      # Lógica de la aplicación y enlace con las vistas.
 ├── Views/           # Vistas.
+├── ViewModels/      # Lógica de la aplicación y enlace con las vistas.
+├── Repositories/    # Persistencia de datos.
 ├── Resources/       # Diccionarios de idiomas.
+├── Themes/          # Temas y Templates de la aplicación..
+├── Assets/          # Iconos e imágenes.
 ├── App.xaml         # Configuración de la aplicación.
 ├── MainWindow.xaml  # Ventana principal de la aplicación.
-├── Assets/          # Iconos e imágenes.
-├── Themes/          # Temas y Templates de la aplicación..
 ```
 
 ## Funcionalidades
