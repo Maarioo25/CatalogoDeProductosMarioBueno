@@ -77,7 +77,6 @@ C:\Users\Mario\Desktop\CatalogoDeProductos\bin\Debug\net8.0-windows\de\Catálogo
 C:\Users\Mario\Desktop\CatalogoDeProductos\bin\Debug\net8.0-windows\en\CatálogoDeProductos.resources.dll
 C:\Users\Mario\Desktop\CatalogoDeProductos\bin\Debug\net8.0-windows\es\CatálogoDeProductos.resources.dll
 C:\Users\Mario\Desktop\CatalogoDeProductos\bin\Debug\net8.0-windows\fr\CatálogoDeProductos.resources.dll
-C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Resources\Styles.baml
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Views\CategoriasView.g.cs
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Views\ConfiguracionView.g.cs
@@ -113,3 +112,6 @@ C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\refint\Catá
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\CatálogoDeProductos.pdb
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\CatálogoDeProductos.genruntimeconfig.cache
 C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\ref\CatálogoDeProductos.dll
+C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Themes\Dark\DarkTheme.baml
+C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Themes\Light\LightTheme.baml
+C:\Users\Mario\Desktop\CatalogoDeProductos\obj\Debug\net8.0-windows\Themes\Templates\ButtonTemplate.baml

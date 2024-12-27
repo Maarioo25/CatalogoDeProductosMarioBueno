@@ -20,15 +20,15 @@ Esta es una aplicación de escritorio desarrollada en **WPF** siguiendo el patr�
 El proyecto está diseñado siguiendo la arquitectura **MVVM**, con la siguiente estructura:
 
 ```plaintext
-CatálogoDeProductos
-├── Models/          # Modelos de datos (productos, configuraciones, etc.)
-├── Repositories/    # Persistencia de datos.
-├── ViewModels/      # Lógica de la aplicación y enlace con la vista.
+├── Models/          # Modelos de datos (productos, categorías, etc.)
 ├── Views/           # Vistas.
-├── Resources/       # Estilos y diccionarios de idiomas.
+├── ViewModels/      # Lógica de la aplicación y enlace con las vistas.
+├── Repositories/    # Persistencia de datos.
+├── Resources/       # Diccionarios de idiomas.
+├── Themes/          # Temas y Templates de la aplicación..
+├── Assets/          # Iconos e imágenes.
 ├── App.xaml         # Configuración de la aplicación.
 ├── MainWindow.xaml  # Ventana principal de la aplicación.
-├── Assets/          # Iconos e imágenes.
 ```
 
 ## Funcionalidades
@@ -38,9 +38,13 @@ CatálogoDeProductos
 - **Vistas disponibles:**
   - **Inicio**: Información general del catálogo.
   - **Productos**: Gestión y visualización del catálogo de productos.
-  - **Categorias**: Gestión y visualización de la lista de categorías.
-  - **Configuración**: Permite cambiar el tema y el idioma de la aplicación.
+  - **Categorías**: Gestión y visualización de las categorías de productos.
+  - **Configuración**: Permite cambiar el idioma de la aplicación.
   - **Salir**: Cierra la aplicación.
+
+### Personalización de Botones
+- Botones del menú lateral con un diseño personalizado y con animaciones personalizadas.
+- Los botones funcionan como si fuesen `RadioButton`, asegurando que solo una vista esté activa a la vez.
 
 ### Estilos y Diseño
 - La aplicación utiliza un esquema de colores personalizado.
@@ -54,6 +58,5 @@ CatálogoDeProductos
 - Cambia el idioma desde la página de **Configuración**.
 - Las etiquetas y textos se actualizan automáticamente según el idioma seleccionado.
 
-### Animaciones
-- Las transiciones entre vistas son fluidas y dinámicas.
-- Botones y elementos interactivos cuentan con animaciones sutiles que mejoran la experiencia de usuario.
+### Animaciones (Opcional)
+- Los botones y elementos interactivos cuentan con animaciones sutiles que mejoran la experiencia de usuario.

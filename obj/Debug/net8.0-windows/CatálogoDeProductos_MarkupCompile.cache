@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Mario\Desktop\CatalogoDeProductos\App.xaml
-61844017209
+8703674270
 
 161978887647
 198-1431420039
-MainWindow.xaml;Resources\Styles.xaml;Views\CategoriasView.xaml;Views\ConfiguracionView.xaml;Views\InicioView.xaml;Views\ProductosView.xaml;
+MainWindow.xaml;Themes\Dark\DarkTheme.xaml;Themes\Light\LightTheme.xaml;Themes\Templates\ButtonTemplate.xaml;Views\CategoriasView.xaml;Views\ConfiguracionView.xaml;Views\InicioView.xaml;Views\ProductosView.xaml;
 
 False
 

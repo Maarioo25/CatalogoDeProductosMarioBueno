@@ -11,7 +11,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border x:Name="Borde" Background="{DynamicResource Background_Secundario_Dark}" Margin="20" Width="200" Height="60" CornerRadius="10" BorderThickness="0">
+                        <Border x:Name="Borde" Background="{DynamicResource Background_Secundario}" Margin="20" Width="200" Height="60" CornerRadius="10" BorderThickness="0">
                             <Border.Effect>
                                 <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10" />
                             </Border.Effect>
@@ -34,7 +34,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.Column="0" Text="{x:Static resources:Resources.txtConfiguracionView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+        <TextBlock Grid.Column="0" Text="{x:Static resources:Resources.txtConfiguracionView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
         
         <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
@@ -43,9 +43,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtTema}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
-            <Button x:Name="btnClaro" Grid.Row="1" Content="{x:Static resources:Resources.btnClaro}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnClaro_Click"/>
-            <Button x:Name="btnOscuro" Grid.Row="2" Content="{x:Static resources:Resources.btnOscuro}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnOscuro_Click"/>
+            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtTema}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
+            <Button x:Name="btnClaro" Grid.Row="1" Content="{x:Static resources:Resources.btnClaro}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnClaro_Click"/>
+            <Button x:Name="btnOscuro" Grid.Row="2" Content="{x:Static resources:Resources.btnOscuro}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnOscuro_Click"/>
         </Grid>
 
         <Grid Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -57,11 +57,11 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtLenguaje}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
-            <Button x:Name="btnEsp" Grid.Row="1" Content="{x:Static resources:Resources.btnEsp}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnEsp_Click"/>
-            <Button x:Name="btnEng" Grid.Row="2" Content="{x:Static resources:Resources.btnEng}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnEng_Click"/>
-            <Button x:Name="btnFra" Grid.Row="3" Content="{x:Static resources:Resources.btnFra}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnFra_Click"/>
-            <Button x:Name="btnAle" Grid.Row="4" Content="{x:Static resources:Resources.btnAle}" FontSize="22" Foreground="{DynamicResource Foreground_Secundario_Dark}" Click="btnAle_Click"/>
+            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtLenguaje}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
+            <Button x:Name="btnEsp" Grid.Row="1" Content="{x:Static resources:Resources.btnEsp}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnEsp_Click"/>
+            <Button x:Name="btnEng" Grid.Row="2" Content="{x:Static resources:Resources.btnEng}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnEng_Click"/>
+            <Button x:Name="btnFra" Grid.Row="3" Content="{x:Static resources:Resources.btnFra}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnFra_Click"/>
+            <Button x:Name="btnAle" Grid.Row="4" Content="{x:Static resources:Resources.btnAle}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnAle_Click"/>
         </Grid>
     </Grid>
 </UserControl>
