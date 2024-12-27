@@ -99,15 +99,25 @@ namespace CatálogoDeProductos.Views
 
         private void RefreshWindow(string culture)
         {
+            var estabaMaximizada = Application.Current.MainWindow.WindowState == WindowState.Maximized;
+
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture);
+
             MainWindow newWindow = new MainWindow();
             newWindow.MainContent.Content = new ConfiguracionView();
+
+            if (estabaMaximizada)
+            {
+                newWindow.WindowState = WindowState.Maximized;
+            }
+
             newWindow.Show();
             Application.Current.MainWindow.Close();
             Application.Current.MainWindow = newWindow;
             newWindow.resetearBordes();
             newWindow.BordeConfiguracion.Effect = null;
         }
+
     }
 }
