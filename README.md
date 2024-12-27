@@ -21,13 +21,14 @@ El proyecto está diseñado siguiendo la arquitectura **MVVM**, con la siguiente
 
 ```plaintext
 CatálogoDeProductos
-├── Models/          # Modelos de datos (productos, configuraciones, etc.)
-├── ViewModels/      # Lógica de la aplicación y enlace con la vista.
+├── Models/          # Modelos de datos (productos, categorías, etc.)
+├── ViewModels/      # Lógica de la aplicación y enlace con las vistas.
 ├── Views/           # Vistas.
-├── Resources/       # Estilos y diccionarios de idiomas.
+├── Resources/       # Diccionarios de idiomas.
 ├── App.xaml         # Configuración de la aplicación.
 ├── MainWindow.xaml  # Ventana principal de la aplicación.
 ├── Assets/          # Iconos e imágenes.
+├── Themes/          # Temas y Templates de la aplicación..
 ```
 
 ## Funcionalidades
@@ -37,11 +38,13 @@ CatálogoDeProductos
 - **Vistas disponibles:**
   - **Inicio**: Información general del catálogo.
   - **Productos**: Gestión y visualización del catálogo de productos.
-  - **Configuración (Settings)**: Permite cambiar el idioma de la aplicación.
+  - **Categorías**: Gestión y visualización de las categorías de productos.
+  - **Configuración**: Permite cambiar el idioma de la aplicación.
+  - **Salir**: Cierra la aplicación.
 
 ### Personalización de Botones
-- Botones del menú lateral con un diseño personalizado.
-- Los botones funcionan como `RadioButton`, asegurando que solo una vista esté activa a la vez.
+- Botones del menú lateral con un diseño personalizado y con animaciones personalizadas.
+- Los botones funcionan como si fuesen `RadioButton`, asegurando que solo una vista esté activa a la vez.
 
 ### Estilos y Diseño
 - La aplicación utiliza un esquema de colores personalizado.
@@ -56,5 +59,4 @@ CatálogoDeProductos
 - Las etiquetas y textos se actualizan automáticamente según el idioma seleccionado.
 
 ### Animaciones (Opcional)
-- Las transiciones entre vistas son fluidas y dinámicas.
-- Botones y elementos interactivos cuentan con animaciones sutiles que mejoran la experiencia de usuario.
+- Los botones y elementos interactivos cuentan con animaciones sutiles que mejoran la experiencia de usuario.

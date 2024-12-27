@@ -7,6 +7,6 @@
              mc:Ignorable="d"
              Height="350" Width="525">
     <Grid>
-        <TextBlock Text="{x:Static resources:Resources.txtCategoriasView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Secundario_Dark}"/>
+        <TextBlock Text="{x:Static resources:Resources.txtCategoriasView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
     </Grid>
 </UserControl>
