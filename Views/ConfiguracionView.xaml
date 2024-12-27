@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
              mc:Ignorable="d"
-             Height="500" Width="750">
+             Height="500" Width="525">
     <UserControl.Resources>
         <Style TargetType="Button">
             <Setter Property="Template">
@@ -31,12 +31,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        <TextBlock Grid.Column="0" Text="{x:Static resources:Resources.txtConfiguracionView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
-        
-        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>

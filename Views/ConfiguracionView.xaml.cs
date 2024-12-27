@@ -106,7 +106,7 @@ namespace CatálogoDeProductos.Views
 
         private void addBordesLenguaje()
         {
-            
+
             btnEsp.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
             btnEng.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
             btnFra.Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 5 };
@@ -123,6 +123,11 @@ namespace CatálogoDeProductos.Views
         {
             var estabaMaximizada = Application.Current.MainWindow.WindowState == WindowState.Maximized;
 
+            double width = Application.Current.MainWindow.Width;
+            double height = Application.Current.MainWindow.Height;
+            double top = Application.Current.MainWindow.Top;
+            double left = Application.Current.MainWindow.Left;
+
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture);
 
@@ -133,6 +138,13 @@ namespace CatálogoDeProductos.Views
             {
                 newWindow.WindowState = WindowState.Maximized;
             }
+            else
+            {
+                newWindow.Width = width;
+                newWindow.Height = height;
+                newWindow.Top = top;
+                newWindow.Left = left;
+            }
 
             if (Application.Current.Resources.MergedDictionaries[0].Source.OriginalString == "Themes/Light/LightTheme.xaml")
             {
@@ -141,7 +153,7 @@ namespace CatálogoDeProductos.Views
                 newWindow.iconoCategorias.Source = new BitmapImage(new Uri("Assets/Icons/Categorias_Light.png", UriKind.Relative));
                 newWindow.iconoConfiguracion.Source = new BitmapImage(new Uri("Assets/Icons/Configuracion_Light.png", UriKind.Relative));
                 newWindow.iconoSalir.Source = new BitmapImage(new Uri("Assets/Icons/Salir_Light.png", UriKind.Relative));
-            }            
+            }
             else
             {
                 newWindow.iconoInicio.Source = new BitmapImage(new Uri("Assets/Icons/Home_Dark.png", UriKind.Relative));
@@ -157,6 +169,7 @@ namespace CatálogoDeProductos.Views
             newWindow.resetearBordes();
             newWindow.BordeConfiguracion.Effect = null;
         }
+
 
     }
 }

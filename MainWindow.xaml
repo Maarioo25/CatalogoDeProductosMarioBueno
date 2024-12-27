@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:CatálogoDeProductos"
         xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+        Height="700" Width="1200" WindowStyle="none" Background="Transparent" ResizeMode="CanResizeWithGrip" MinWidth="775" MinHeight="600" AllowsTransparency="True">
 
     <Window.Resources>
         <ResourceDictionary>
