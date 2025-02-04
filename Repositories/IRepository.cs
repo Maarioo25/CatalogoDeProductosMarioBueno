@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace CatálogoDeProductos.Repositories;
 
-namespace CatálogoDeProductos.Repositories
+internal interface IRepository<T>
 {
-    public interface IRepository<T>
-    {
-        List<T> GetAll();
-        void Add(T clase);
-        void Delete(T clase);
-        void Update(T clase);
-    }
+    public T Get(int id);
+    public IEnumerable<T> GetAll();
+    public void Add(T item);
+    public void Delete(T item);
+    public void Update(T item);
 }

@@ -13,7 +13,7 @@
 
                         <Border.Effect>
 
-                            <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10"/>
+                            <DropShadowEffect Color="Black" ShadowDepth="10" BlurRadius="10"/>
 
                         </Border.Effect>
 
@@ -25,8 +25,36 @@
 
                         <Trigger Property="IsMouseOver" Value="True">
 
-                            <Setter TargetName="Borde" Property="Effect" Value="{x:Null}" />
+                            <Setter TargetName="Borde" Property="Effect">
 
+                                <Setter.Value>
+
+                                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10" />
+
+                                </Setter.Value>
+
+                            </Setter>
+
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            
+                            <Setter TargetName="Borde" Property="Background" Value="{DynamicResource Background_Deshabilitado}" />
+                            
+                            <Setter TargetName="Borde" Property="BorderBrush" Value="Gray" />
+                            
+                            <Setter TargetName="Borde" Property="Effect">
+                                
+                                <Setter.Value>
+                                    
+                                    <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="5" />
+                                    
+                                </Setter.Value>
+                                
+                            </Setter>
+                            
+                            <Setter Property="Foreground" Value="Gray" />
+                            
                         </Trigger>
 
                     </ControlTemplate.Triggers>

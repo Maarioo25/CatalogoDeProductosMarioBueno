@@ -1,85 +1,110 @@
 ﻿using CatálogoDeProductos.Models;
-using CatálogoDeProductos.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CatálogoDeProductos.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 
-namespace CatálogoDeProductos.ViewModels
+namespace CatálogoDeProductos.ViewModels;
+
+partial class CategoriaViewModel(IRepositoryService<Categoria> categoriaService) : ObservableObject
 {
-    internal class CategoriaViewModel
+
+    [ObservableProperty]
+    private string? _textoBusquedaCategorias;
+
+    partial void OnTextoBusquedaCategoriasChanged(string? value)
     {
-        private CategoriaRepository _repositorio;
+        FiltrarCategorias(value);
+    }
 
-        public CategoriaViewModel()
+    private void FiltrarCategorias(string? texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
         {
-            _repositorio = new CategoriaRepository();
+            Categorias = new ObservableCollection<Categoria>(categoriaService.GetAll());
+        }
+        else
+        {
+            var categoriasFiltradas = categoriaService.GetAll().Where(p => p.Nombre.Contains(texto, StringComparison.OrdinalIgnoreCase)).ToList();
+            Categorias = new ObservableCollection<Categoria>(categoriasFiltradas);
+        }
+    }
+
+    [ObservableProperty]
+    private ObservableCollection<Categoria> _categorias = new(categoriaService.GetAll());
+
+    [ObservableProperty]
+    private Categoria? _categoriaSeleccionada;
+
+    [ObservableProperty]
+    private int? _id = null;
+
+    [ObservableProperty]
+    private String? _nombre = String.Empty;
+
+    [ObservableProperty]
+    private String? _descripcion = String.Empty;
+
+    private bool CanAddCategoria => (CategoriaSeleccionada == null && Id == null && !string.IsNullOrEmpty(Nombre) && !string.IsNullOrEmpty(Descripcion));
+
+    public bool CanEditDeleteDeselectCategoria => CategoriaSeleccionada != null;
+
+    partial void OnNombreChanged(string? value)
+    {
+        OnPropertyChanged(nameof(CanAddCategoria));
+        AddCategoriaCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnDescripcionChanged(string? value)
+    {
+        OnPropertyChanged(nameof(CanAddCategoria));
+        AddCategoriaCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnCategoriaSeleccionadaChanged(Categoria? selectedCategoria)
+    {
+        if (selectedCategoria != null)
+        {
+            Nombre = selectedCategoria.Nombre;
+            Descripcion = selectedCategoria.Descripcion;
+        }
+        else
+        {
+            Nombre = string.Empty;
+            Descripcion = string.Empty;
         }
 
-        public List<CategoriaModel> ObtenerCategorias()
-        {
-            return _repositorio.GetAll();
-        }
+        OnPropertyChanged(nameof(CanAddCategoria));
+        AddCategoriaCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(CanEditDeleteDeselectCategoria));
+    }
 
-        public CategoriaModel? ObtenerCategoriaPorId(int id)
-        {
-            return _repositorio.GetById(id);
+    [RelayCommand(CanExecute = nameof(CanAddCategoria))]
+    private void AddCategoria()
+    {
+        categoriaService.Add(new Categoria{ 
+            Nombre = Nombre, 
+            Descripcion = Descripcion
+        });
+        Categorias = new ObservableCollection<Categoria>(categoriaService.GetAll());
+        Nombre = String.Empty;
+        Descripcion = String.Empty;
+        Id = null;
+    }
 
-        }
+    [RelayCommand]
+    private void DeleteCategoria() {
+        categoriaService.Delete(CategoriaSeleccionada);
+        Categorias = new ObservableCollection<Categoria>(categoriaService.GetAll());
+    }
 
-        public void AgregarCategoria(CategoriaModel categoria)
-        {
-            if (_repositorio.GetById(categoria.Id) == null)
-            {
-                _repositorio.Add(categoria);
-            }
-            else
-            {
-                _repositorio.Update(categoria);
-            }
-        }
-
-        public void EliminarCategoria(CategoriaModel categoria)
-        {
-            if (_repositorio.GetById(categoria.Id) != null)
-            {
-                _repositorio.Delete(categoria);
-            }
-        }
-
-        public void EditarCategoria(CategoriaModel categoria)
-        {
-            if (_repositorio.GetById(categoria.Id) != null)
-            {
-                _repositorio.Update(categoria);
-            }
-        }
-
-        List<ProductoModel>? ObtenerProductosDeCategoria(int idCategoria)
-        {
-            CategoriaModel categoria = ObtenerCategoriaPorId(idCategoria);
-            if (categoria != null)
-            {
-                return categoria.Productos;
-            }
-            else
-            {
-                return null;
-
-            }
-        }
-
-        void agregarProductoACategoria(int idCategoria, ProductoModel producto)
-        {
-            CategoriaModel categoria = ObtenerCategoriaPorId(idCategoria);
-            if (categoria != null)
-            {
-                if (!categoria.Productos.Contains(producto))
-                {
-                    categoria.Productos.Add(producto);
-                }
-            }
-        }
+    [RelayCommand]
+    private void UpdateCategoria()
+    {
+        Categoria categoria = CategoriaSeleccionada;
+        categoria.Nombre = Nombre;
+        categoria.Descripcion = Descripcion;
+        categoriaService.Update(categoria);
+        Categorias = new ObservableCollection<Categoria>(categoriaService.GetAll());
     }
 }

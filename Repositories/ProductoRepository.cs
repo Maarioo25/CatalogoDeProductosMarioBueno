@@ -1,47 +1,31 @@
-﻿using CatálogoDeProductos.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CatálogoDeProductos.Data;
+using CatálogoDeProductos.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace CatálogoDeProductos.Repositories
+namespace CatálogoDeProductos.Repositories;
+
+public class ProductoRepository(AppDbContext context) : IRepository<Producto>
 {
-    public class ProductoRepository : IRepository<ProductoModel>
+    private readonly AppDbContext _context = context;
+    public void Add(Producto item)
     {
-        List<ProductoModel> _productos = new List<ProductoModel>(
-            new ProductoModel[] {
-                new ProductoModel (1,"Producto 1","Descripción del producto 1", 100, 1),
-                new ProductoModel (2,"Producto 2","Descripción del producto 2", 200, 2),
-                new ProductoModel (3,"Producto 3","Descripción del producto 3", 300, 3),
-                new ProductoModel (4,"Producto 4","Descripción del producto 4", 400, 4),
-                new ProductoModel (5,"Producto 5","Descripción del producto 5", 500, 5),
-            }
-            );
+        _context.Add(item);
+        _context.SaveChanges();
+    }
 
-        public List<ProductoModel> GetAll()
-        {
-            return _productos;
-        }
+    public void Delete(Producto item)
+    {
+        _context.Remove(item);
+        _context.SaveChanges();
+    }
 
-        public ProductoModel? GetById(int id)
-        {
-            return _productos.Find(p => p.Id == id);
-        }
+    public Producto Get(int id) => _context.Productos.ToList<Producto>().Find(c => c.Id == id);
 
-        public void Add(ProductoModel clase)
-        {
-            _productos.Add( clase );
-        }
+    public IEnumerable<Producto> GetAll() => _context.Productos.ToList();
 
-        public void Delete(ProductoModel clase)
-        {
-            _productos.Remove(clase);
-        }
-
-        public void Update(ProductoModel clase)
-        {
-            _productos[_productos.FindIndex(p => p.Id == clase.Id)] = clase;
-        }
+    public void Update(Producto item)
+    {
+        _context.Entry(item).State = EntityState.Modified;
+        _context.SaveChanges();
     }
 }

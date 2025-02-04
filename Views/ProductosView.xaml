@@ -4,9 +4,215 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
+             xmlns:vm="clr-namespace:CatálogoDeProductos.ViewModels"
              mc:Ignorable="d"
-             Height="350" Width="525">
-    <Grid>
-        <TextBlock Text="{x:Static resources:Resources.txtProductosView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
+             Background="{DynamicResource Background_Secundario}">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtProductosView}" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Foreground="{DynamicResource Foreground_Primario}" Margin="0,0,0,15"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="35*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="ListaProductos" SelectedItem="{Binding ProductoSeleccionado, Mode=TwoWay}" Grid.Column="0" ItemsSource="{Binding Productos}" Margin="20" BorderThickness="3" BorderBrush="{DynamicResource Background_Primario}" Background="{DynamicResource Background_Secundario}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Foreground" Value="{DynamicResource Foreground_Secundario}"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="Padding" Value="5"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+
+
+                <ListView.View>
+                    <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="Background" Value="{DynamicResource Background_Secundario}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource Foreground_Primario}"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Padding" Value="10,5"/>
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Gray" BlurRadius="5" ShadowDepth="1"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+
+                        <GridViewColumn Width="40" Header="{x:Static resources:Resources.txtId}" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Width="125" Header="{x:Static resources:Resources.txtNombre}" DisplayMemberBinding="{Binding Nombre}"/>
+                        <GridViewColumn Width="75" Header="{x:Static resources:Resources.txtPrecio}" DisplayMemberBinding="{Binding Precio}"/>
+                        <GridViewColumn Width="165" Header="{x:Static resources:Resources.txtDescripcion}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Descripcion}" TextTrimming="CharacterEllipsis"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="90" Header="{x:Static resources:Resources.txtCategoria}" DisplayMemberBinding="{Binding IdCategoria}"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="3.5*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="3.5*"/>
+
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="5" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+                    <Border.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding CambiarImagenCommand}" />
+                    </Border.InputBindings>
+                    <Grid Background="Transparent">
+                        <Border Background="Transparent" Cursor="Hand">
+                            <Image x:Name="MainImage" Source="{Binding UriImagen}" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1"/>
+                        </Border>
+
+                        <Image x:Name="EditIcon" Source="{DynamicResource IconoEdit}" Width="35" Height="35" Opacity="0" VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand"/>
+
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="EditIcon" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2" />
+                                        <DoubleAnimation Storyboard.TargetName="MainImage" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="EditIcon" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2" />
+                                        <DoubleAnimation Storyboard.TargetName="MainImage" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                    </Grid>
+                </Border>
+
+
+                <Grid Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" IsEnabled="{Binding CanAddProducto}" FontSize="20" Foreground="{DynamicResource Foreground_Primario}" Margin="10" Command="{Binding AddProductoCommand}">
+                            <Button.Content>
+                                <TextBlock Text="{x:Static resources:Resources.txtAddProducto}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            </Button.Content>
+                        </Button>
+                        <Button Grid.Column="1" IsEnabled="{Binding CanEditDeleteDeselectProducto}" FontSize="20" Foreground="{DynamicResource Foreground_Primario}" Margin="10" Command="{Binding UpdateProductoCommand}">
+                            <Button.Content>
+                                <TextBlock Text="{x:Static resources:Resources.txtEditProducto}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            </Button.Content>
+                        </Button>
+                    </Grid>
+                    
+                </Grid>
+
+                
+                    
+                
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" IsEnabled="{Binding CanEditDeleteDeselectProducto}" Foreground="{DynamicResource Foreground_Primario}" Margin="15" Click="Button_Click" >
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtDeseleccionarProducto}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="1" IsEnabled="{Binding CanEditDeleteDeselectProducto}" Foreground="{DynamicResource Foreground_Primario}" Margin="15" Command = "{Binding DeleteProductoCommand}">
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtDeleteProducto}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtId}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ProductoSeleccionado.Id, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtNombre}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtPrecio}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" Text="{Binding Precio, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtCategoria}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" Text="{Binding IdCategoria, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="9*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtDescripcion}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox TextWrapping="Wrap" Padding="10" Text="{Binding Descripcion, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Height="200" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>

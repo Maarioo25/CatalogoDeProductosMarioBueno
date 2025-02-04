@@ -3,10 +3,154 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CatálogoDeProductos.ViewModels"
              xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
-             mc:Ignorable="d"
-             Height="350" Width="525">
-    <Grid>
-        <TextBlock Text="{x:Static resources:Resources.txtCategoriasView}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
-    </Grid>
-</UserControl>
+             mc:Ignorable="d">
+    <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtCategoriasView}" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Foreground="{DynamicResource Foreground_Primario}" Margin="0,0,0,15"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+
+            <ListView x:Name="ListaCategorias" SelectedItem="{Binding CategoriaSeleccionada, Mode=TwoWay}" Grid.Column="0" ItemsSource="{Binding Categorias}" Margin="20" BorderThickness="3" BorderBrush="{DynamicResource Background_Primario}" Background="{DynamicResource Background_Secundario}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Foreground" Value="{DynamicResource Foreground_Secundario}"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Padding" Value="5"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
+
+
+                    <ListView.View>
+                        <GridView>
+                            <GridView.ColumnHeaderContainerStyle>
+                                <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="Background" Value="{DynamicResource Background_Secundario}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource Foreground_Primario}"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="Padding" Value="10,5"/>
+                                    <Setter Property="BorderBrush" Value="Gray"/>
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect Color="Gray" BlurRadius="5" ShadowDepth="1"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </GridView.ColumnHeaderContainerStyle>
+
+                            <GridViewColumn Width="40" Header="{x:Static resources:Resources.txtId}" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Width="125" Header="{x:Static resources:Resources.txtNombre}" DisplayMemberBinding="{Binding Nombre}"/>
+                        <GridViewColumn Width="200" Header="{x:Static resources:Resources.txtDescripcion}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Descripcion}" TextTrimming="CharacterEllipsis"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                    </ListView.View>
+                </ListView>
+                <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Button Grid.Column="0" IsEnabled="{Binding CanAddCategoria}" FontSize="20" Foreground="{DynamicResource Foreground_Primario}" Margin="15" Command="{Binding AddCategoriaCommand}">
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtAddCategoria}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Button Grid.Column="1" IsEnabled="{Binding CanEditDeleteDeselectCategoria}" FontSize="20" Foreground="{DynamicResource Foreground_Primario}" Margin="15" Command="{Binding UpdateCategoriaCommand}">
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtEditCategoria}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" IsEnabled="{Binding CanEditDeleteDeselectCategoria}" Foreground="{DynamicResource Foreground_Primario}" Margin="15" Click="Button_Click">
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtDeseleccionarCategoria}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="1" IsEnabled="{Binding CanEditDeleteDeselectCategoria}" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding DeleteCategoriaCommand}" Margin="15">
+                        <Button.Content>
+                            <TextBlock Text="{x:Static resources:Resources.txtDeleteCategoria}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                    
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="8*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtId}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" Grid.Row="1" IsEnabled="False" Text="{Binding CategoriaSeleccionada.Id, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtNombre}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox VerticalContentAlignment="Center" TextWrapping="Wrap" Grid.Row="1" Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="25" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="9*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Static resources:Resources.txtDescripcion}" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="{DynamicResource Foreground_Primario}"/>
+                            <TextBox TextWrapping="Wrap" Padding="10" Grid.Row="1" Text="{Binding Descripcion, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="200" TextAlignment="Center" VerticalAlignment="Top" Margin="2" Background="{DynamicResource Background_TextBox}"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            </Grid>
+        </Grid>
+
+    </UserControl>

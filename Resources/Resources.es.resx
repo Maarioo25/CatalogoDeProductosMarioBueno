@@ -138,6 +138,9 @@
   <data name="btnFra" xml:space="preserve">
     <value>Francés</value>
   </data>
+  <data name="btnGraficos" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
   <data name="btnInicio" xml:space="preserve">
     <value>Inicio</value>
   </data>
@@ -153,17 +156,71 @@
   <data name="Title" xml:space="preserve">
     <value>Catálogo de Productos</value>
   </data>
+  <data name="txtAddCategoria" xml:space="preserve">
+    <value>Añadir Categoría</value>
+  </data>
+  <data name="txtAddProducto" xml:space="preserve">
+    <value>Añadir Producto</value>
+  </data>
+  <data name="txtAviso" xml:space="preserve">
+    <value>Es necesario reiniciar la aplicación para aplicar los cambios de idioma. ¿Quieres reiniciar ahora?</value>
+  </data>
+  <data name="txtCambioDeIdioma" xml:space="preserve">
+    <value>Cambiar de idioma</value>
+  </data>
+  <data name="txtCantidadDeProductosPorCategoria" xml:space="preserve">
+    <value>Cantidad de productos por categoría</value>
+  </data>
+  <data name="txtCategoria" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
   <data name="txtCategoriasView" xml:space="preserve">
     <value>Vista de Categorías</value>
   </data>
   <data name="txtConfiguracionView" xml:space="preserve">
     <value>Vista de Configuración</value>
   </data>
+  <data name="txtContacto" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="txtDeleteCategoria" xml:space="preserve">
+    <value>Borrar Categoría</value>
+  </data>
+  <data name="txtDeleteProducto" xml:space="preserve">
+    <value>Borrar Producto</value>
+  </data>
+  <data name="txtDescripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="txtDeseleccionarCategoria" xml:space="preserve">
+    <value>Deseleccionar Categoría</value>
+  </data>
+  <data name="txtDeseleccionarProducto" xml:space="preserve">
+    <value>Deseleccionar Producto</value>
+  </data>
+  <data name="txtEditCategoria" xml:space="preserve">
+    <value>Editar Categoría</value>
+  </data>
+  <data name="txtEditProducto" xml:space="preserve">
+    <value>Editar Producto</value>
+  </data>
+  <data name="txtId" xml:space="preserve">
+    <value>Id</value>
+  </data>
   <data name="txtInicioView" xml:space="preserve">
     <value>Vista de Inicio</value>
   </data>
   <data name="txtLenguaje" xml:space="preserve">
     <value>Idioma</value>
+  </data>
+  <data name="txtNombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="txtPrecio" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="txtProductosPorRangoDePrecios" xml:space="preserve">
+    <value>Productos por rango de precios</value>
   </data>
   <data name="txtProductosView" xml:space="preserve">
     <value>Vista de Productos</value>

@@ -1,53 +1,180 @@
 ﻿using CatálogoDeProductos.Models;
-using CatálogoDeProductos.Repositories;
-using System.Collections.Generic;
+using CatálogoDeProductos.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
+using System.Collections.ObjectModel;
 
-namespace CatálogoDeProductos.ViewModels
+namespace CatálogoDeProductos.ViewModels;
+
+partial class ProductoViewModel(IRepositoryService<Producto> productoService) : ObservableObject
 {
-    internal class ProductoViewModel
+    [ObservableProperty]
+    private string? _textoBusquedaProductos;
+
+    partial void OnTextoBusquedaProductosChanged(string? value)
     {
-        private ProductoRepository _repositorio;
-        public ProductoViewModel()
+        FiltrarProductos(value);
+    }
+
+    private void FiltrarProductos(string? texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
         {
-            _repositorio = new ProductoRepository();
+            Productos = new ObservableCollection<Producto>(productoService.GetAll());
+        }
+        else
+        {
+            var productosFiltrados = productoService.GetAll().Where(p => p.Nombre.Contains(texto, StringComparison.OrdinalIgnoreCase)).ToList();
+            Productos = new ObservableCollection<Producto>(productosFiltrados);
+        }
+    }
+
+
+
+    [ObservableProperty]
+    private ObservableCollection<Producto> _productos = new(productoService.GetAll());
+
+    [ObservableProperty]
+    private Producto? _productoSeleccionado = null;
+
+    [ObservableProperty]
+    private int? _id = null;
+
+    [ObservableProperty]
+    private String? _nombre = String.Empty;
+
+    [ObservableProperty]
+    private double? _precio = null;
+
+    [ObservableProperty]
+    private String? _descripcion = String.Empty;
+
+    [ObservableProperty]
+    private int? _idCategoria = null;
+
+    [ObservableProperty]
+    private string? _uriImagen = String.Empty;
+
+    private bool CanAddProducto => (ProductoSeleccionado == null && Id == null && !string.IsNullOrEmpty(Nombre) && Precio != null && !string.IsNullOrEmpty(Descripcion) && IdCategoria != null);
+
+    public bool CanEditDeleteDeselectProducto => ProductoSeleccionado != null;
+
+    partial void OnNombreChanged(string? value)
+    {
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnDescripcionChanged(string? value)
+    {
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnPrecioChanged(double? value)
+    {
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnIdCategoriaChanged(int? value)
+    {
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+    }
+
+    partial void OnUriImagenChanged(string? value)
+    {
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(ProductoSeleccionado));
+    }
+
+
+
+    partial void OnProductoSeleccionadoChanged(Producto? productoSeleccionado)
+    {
+        if (productoSeleccionado != null)
+        {
+            Id = productoSeleccionado.Id;
+            Nombre = productoSeleccionado.Nombre;
+            Descripcion = productoSeleccionado.Descripcion;
+            Precio = productoSeleccionado.Precio;
+            IdCategoria = productoSeleccionado.IdCategoria;
+            UriImagen = productoSeleccionado.UriImagen;
+        }
+        else
+        {
+            Id = null;
+            Nombre = string.Empty;
+            Descripcion = string.Empty;
+            Precio = null;
+            IdCategoria = null;
+            UriImagen = null;
         }
 
-        public List<ProductoModel> ObtenerProductos()
-        {
-            return _repositorio.GetAll();
-        }
+        OnPropertyChanged(nameof(CanAddProducto));
+        AddProductoCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(CanEditDeleteDeselectProducto));
+    }
 
-        public ProductoModel? ObtenerProductoPorId(int id)
-        {
-            return _repositorio.GetById(id);
-        }
 
-        public void AgregarProducto(ProductoModel producto)
+    [RelayCommand]
+    private void CambiarImagen()
+    {
+        OpenFileDialog ventana = new OpenFileDialog
         {
-            if (_repositorio.GetById(producto.Id) == null)
-            {
-                _repositorio.Add(producto);
-            }
-            else
-            {
-                _repositorio.Update(producto);
-            }
+            Filter = "Imágenes (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg",
+            Title = "Seleccionar imagen del producto"
+        };
+        if (ventana.ShowDialog() == true)
+        {
+            UriImagen = ventana.FileName;
+            OnPropertyChanged(nameof(UriImagen));
         }
+    }
 
-        public void EliminarProducto(ProductoModel producto)
+    [RelayCommand(CanExecute = nameof(CanAddProducto))]
+    private void AddProducto()
+    {
+        productoService.Add(new Producto
         {
-            if (_repositorio.GetById(producto.Id) != null)
-            {
-                _repositorio.Delete(producto);
-            }
-        }
+            Nombre = Nombre,
+            Precio = Precio,
+            Descripcion = Descripcion,
+            IdCategoria = IdCategoria,
+            UriImagen = UriImagen
+        });
+        Productos = new ObservableCollection<Producto>(productoService.GetAll());
+        Nombre = String.Empty;
+        Descripcion = String.Empty;
+        Id = null;
+        Precio = null;
+        IdCategoria = null;
+        UriImagen = null;
+    }
 
-        public void EditarProducto(ProductoModel producto)
-        {
-            if (_repositorio.GetById(producto.Id) != null)
-            {
-                _repositorio.Update(producto);
-            }
-        }
+
+    [RelayCommand]
+    private void DeleteProducto()
+    {
+        productoService.Delete(ProductoSeleccionado);
+        Productos = new ObservableCollection<Producto>(productoService.GetAll());
+    }
+
+    
+
+    [RelayCommand]
+    private void UpdateProducto()
+    {
+        Producto producto = ProductoSeleccionado;
+        producto.Nombre = Nombre;
+        producto.Descripcion = Descripcion;
+        producto.Precio = Precio;
+        producto.IdCategoria = IdCategoria;
+        producto.UriImagen = UriImagen;
+        productoService.Update(producto);
+        Productos = new ObservableCollection<Producto>(productoService.GetAll());
     }
 }

@@ -124,6 +124,15 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Graphics.
+        /// </summary>
+        public static string btnGraficos {
+            get {
+                return ResourceManager.GetString("btnGraficos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Home.
         /// </summary>
         public static string btnInicio {
@@ -169,6 +178,60 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Add Category.
+        /// </summary>
+        public static string txtAddCategoria {
+            get {
+                return ResourceManager.GetString("txtAddCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Add Product.
+        /// </summary>
+        public static string txtAddProducto {
+            get {
+                return ResourceManager.GetString("txtAddProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a You need to restart the application to apply the language changes. Do you want to restart now?.
+        /// </summary>
+        public static string txtAviso {
+            get {
+                return ResourceManager.GetString("txtAviso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change language.
+        /// </summary>
+        public static string txtCambioDeIdioma {
+            get {
+                return ResourceManager.GetString("txtCambioDeIdioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Number of products per category.
+        /// </summary>
+        public static string txtCantidadDeProductosPorCategoria {
+            get {
+                return ResourceManager.GetString("txtCantidadDeProductosPorCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Category.
+        /// </summary>
+        public static string txtCategoria {
+            get {
+                return ResourceManager.GetString("txtCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Categories View.
         /// </summary>
         public static string txtCategoriasView {
@@ -187,7 +250,88 @@ namespace CatálogoDeProductos.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Home.
+        ///   Busca una cadena traducida similar a Contact.
+        /// </summary>
+        public static string txtContacto {
+            get {
+                return ResourceManager.GetString("txtContacto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Delete Category.
+        /// </summary>
+        public static string txtDeleteCategoria {
+            get {
+                return ResourceManager.GetString("txtDeleteCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Delete Product.
+        /// </summary>
+        public static string txtDeleteProducto {
+            get {
+                return ResourceManager.GetString("txtDeleteProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description.
+        /// </summary>
+        public static string txtDescripcion {
+            get {
+                return ResourceManager.GetString("txtDescripcion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deselect Category.
+        /// </summary>
+        public static string txtDeseleccionarCategoria {
+            get {
+                return ResourceManager.GetString("txtDeseleccionarCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deselect Product.
+        /// </summary>
+        public static string txtDeseleccionarProducto {
+            get {
+                return ResourceManager.GetString("txtDeseleccionarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Edit Category.
+        /// </summary>
+        public static string txtEditCategoria {
+            get {
+                return ResourceManager.GetString("txtEditCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Edit Product.
+        /// </summary>
+        public static string txtEditProducto {
+            get {
+                return ResourceManager.GetString("txtEditProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id.
+        /// </summary>
+        public static string txtId {
+            get {
+                return ResourceManager.GetString("txtId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Home View.
         /// </summary>
         public static string txtInicioView {
             get {
@@ -201,6 +345,33 @@ namespace CatálogoDeProductos.Resources {
         public static string txtLenguaje {
             get {
                 return ResourceManager.GetString("txtLenguaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Name.
+        /// </summary>
+        public static string txtNombre {
+            get {
+                return ResourceManager.GetString("txtNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        public static string txtPrecio {
+            get {
+                return ResourceManager.GetString("txtPrecio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Products by price range.
+        /// </summary>
+        public static string txtProductosPorRangoDePrecios {
+            get {
+                return ResourceManager.GetString("txtProductosPorRangoDePrecios", resourceCulture);
             }
         }
         

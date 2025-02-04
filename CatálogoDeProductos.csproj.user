@@ -13,6 +13,9 @@
     <Compile Update="Views\ConfiguracionView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\GraficosView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\InicioView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,7 +24,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Themes\Templates\RadioButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GraficosView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Dark\DarkTheme.xaml">

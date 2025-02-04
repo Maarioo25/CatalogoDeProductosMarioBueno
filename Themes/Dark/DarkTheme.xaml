@@ -5,6 +5,18 @@
     <SolidColorBrush x:Key="Background_Secundario" Color="#383838"/>
     <SolidColorBrush x:Key="Background_Terciario" Color="#4d4d4d"/>
     <SolidColorBrush x:Key="Foreground_Primario" Color="#cccccc"/>
+    <SolidColorBrush x:Key="Foreground_Secundario" Color="#999999"/>
+    <SolidColorBrush x:Key="Background_TextBox" Color="#bbbbbb"/>
 
+    <BitmapImage x:Key="IconoInicio" UriSource="/Assets/Icons/Home_Dark.png"/>
+    <BitmapImage x:Key="IconoProductos" UriSource="/Assets/Icons/Productos_Dark.png"/>
+    <BitmapImage x:Key="IconoCategorias" UriSource="/Assets/Icons/Categorias_Dark.png"/>
+    <BitmapImage x:Key="IconoConfiguracion" UriSource="/Assets/Icons/Configuracion_Dark.png"/>
+    <BitmapImage x:Key="IconoGraficos" UriSource="/Assets/Icons/Graficos_Dark.png"/>
+    <BitmapImage x:Key="IconoSalir" UriSource="/Assets/Icons/Salir_Dark.png"/>
+    <BitmapImage x:Key="IconoEdit" UriSource="/Assets/Icons/Edit_Dark.png"/>
+    <BitmapImage x:Key="IconoMail" UriSource="/Assets/Icons/Mail_Dark.png"/>
+    <BitmapImage x:Key="IconoLinkedIn" UriSource="/Assets/Icons/LinkedIn_Dark.png"/>
+    <BitmapImage x:Key="IconoGitHub" UriSource="/Assets/Icons/GitHub_Dark.png"/>
 
 </ResourceDictionary>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\maari\Desktop\CatalogoDeProductosParte1\CatalogoDeProductosMarioBueno\obj\Debug\net8.0-windows\
+C:\Users\maari\Desktop\Catalogo_De_Productos\obj\Debug\net8.0-windows\
 CatálogoDeProductos
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\maari\Desktop\CatalogoDeProductosParte1\CatalogoDeProductosMarioBueno\App.xaml
-8703674270
+C:\Users\maari\Desktop\Catalogo_De_Productos\App.xaml
+10306863227
 
-18-14871116
-198-1431420039
-MainWindow.xaml;Themes\Dark\DarkTheme.xaml;Themes\Light\LightTheme.xaml;Themes\Templates\ButtonTemplate.xaml;Views\CategoriasView.xaml;Views\ConfiguracionView.xaml;Views\InicioView.xaml;Views\ProductosView.xaml;
+281758053138
+239372065608
+Themes\Dark\DarkTheme.xaml;Themes\Light\LightTheme.xaml;Themes\Templates\ButtonTemplate.xaml;Themes\Templates\RadioButtonTemplate.xaml;Views\CategoriasView.xaml;Views\ConfiguracionView.xaml;Views\GraficosView.xaml;Views\InicioView.xaml;Views\MainView.xaml;Views\ProductosView.xaml;
 
 False
 

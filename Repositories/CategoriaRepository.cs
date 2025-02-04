@@ -1,47 +1,33 @@
-﻿using CatálogoDeProductos.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CatálogoDeProductos.Data;
+using CatálogoDeProductos.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace CatálogoDeProductos.Repositories
+namespace CatálogoDeProductos.Repositories;
+
+public class CategoriaRepository(AppDbContext context) : IRepository<Categoria>
 {
-    public class CategoriaRepository : IRepository<CategoriaModel>
+    private readonly AppDbContext _context = context;
+    public void Add(Categoria item)
     {
-        List<CategoriaModel> _categorias = new List<CategoriaModel>(
-            new CategoriaModel[] {
-                new CategoriaModel (1,"Categoria 1","Descripción de la categoría 1"),
-                new CategoriaModel (2,"Categoria 2","Descripción de la categoría 2"),
-                new CategoriaModel (3,"Categoria 3","Descripción de la categoría 3"),
-                new CategoriaModel (4,"Categoria 4","Descripción de la categoría 4"),
-                new CategoriaModel (5,"Categoria 5","Descripción de la categoría 5"),
-            }
-            );
-
-        public void Add(CategoriaModel clase)
-        {
-            _categorias.Add(clase);
-        }
-
-        public void Delete(CategoriaModel clase)
-        {
-            _categorias.Remove(clase);
-        }
-
-        public List<CategoriaModel> GetAll()
-        {
-            return _categorias;
-        }
-
-        public CategoriaModel? GetById(int id)
-        {
-            return _categorias.Find(p => p.Id == id);
-        }
-
-        public void Update(CategoriaModel clase)
-        {
-            _categorias[_categorias.FindIndex(p => p.Id == clase.Id)] = clase;
-        }
+        _context.Add(item);
+        _context.SaveChanges();
     }
+
+    public void Delete(Categoria item)
+    {
+        _context.Remove(item);
+        _context.SaveChanges();
+    }
+
+    public Categoria Get(int id) => _context.Categorias.ToList<Categoria>().Find(c => c.Id == id);
+
+    public IEnumerable<Categoria> GetAll() => _context.Categorias.ToList();
+
+    public void Update(Categoria item)
+    {
+        _context.Entry(item).State = EntityState.Modified;
+        _context.SaveChanges();
+    }
+
+
 }

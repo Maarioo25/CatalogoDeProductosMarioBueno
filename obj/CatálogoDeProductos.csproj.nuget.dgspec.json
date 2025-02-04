@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maari\\Desktop\\CatalogoDeProductosParte1\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj": {}
+    "C:\\Users\\maari\\Desktop\\Catalogo_De_Productos\\CatálogoDeProductos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maari\\Desktop\\CatalogoDeProductosParte1\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj": {
+    "C:\\Users\\maari\\Desktop\\Catalogo_De_Productos\\CatálogoDeProductos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maari\\Desktop\\CatalogoDeProductosParte1\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj",
+        "projectUniqueName": "C:\\Users\\maari\\Desktop\\Catalogo_De_Productos\\CatálogoDeProductos.csproj",
         "projectName": "CatálogoDeProductos",
-        "projectPath": "C:\\Users\\maari\\Desktop\\CatalogoDeProductosParte1\\CatalogoDeProductosMarioBueno\\CatálogoDeProductos.csproj",
+        "projectPath": "C:\\Users\\maari\\Desktop\\Catalogo_De_Productos\\CatálogoDeProductos.csproj",
         "packagesPath": "C:\\Users\\maari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maari\\Desktop\\CatalogoDeProductosParte1\\CatalogoDeProductosMarioBueno\\obj\\",
+        "outputPath": "C:\\Users\\maari\\Desktop\\Catalogo_De_Productos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,24 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.WPF": {
+              "target": "Package",
+              "version": "[2.0.0-rc5.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

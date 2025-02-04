@@ -3,29 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:resources="clr-namespace:CatálogoDeProductos.Resources"
+             xmlns:vm="clr-namespace:CatálogoDeProductos.ViewModels"
+             xmlns:resources="clr-namespace:CatálogoDeProductos.Resources" 
+             d:DataContext="{d:DesignInstance Type=vm:ConfiguracionViewModel}"
              mc:Ignorable="d"
              Height="500" Width="525">
     <UserControl.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="Borde" Background="{DynamicResource Background_Secundario}" Margin="20" Width="200" Height="60" CornerRadius="10" BorderThickness="0">
-                            <Border.Effect>
-                                <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10" />
-                            </Border.Effect>
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Borde" Property="Effect" Value="{x:Null}" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/Templates/RadioButtonTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -33,32 +21,36 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtTema}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
-            <Button x:Name="btnClaro" Grid.Row="1" Content="{x:Static resources:Resources.btnClaro}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnClaro_Click"/>
-            <Button x:Name="btnOscuro" Grid.Row="2" Content="{x:Static resources:Resources.btnOscuro}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnOscuro_Click"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{x:Static resources:Resources.txtTema}" FontSize="24" FontWeight="Bold" Foreground="{DynamicResource Foreground_Primario}"/>
+            <RadioButton x:Name="btnClaro" Grid.Row="2" Margin="10" GroupName="Tema" Content="{x:Static resources:Resources.btnClaro}" FontSize="18" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarTemaClaroCommand}"/>
+            <RadioButton x:Name="btnOscuro" Grid.Row="3" Margin="10" GroupName="Tema" Content="{x:Static resources:Resources.btnOscuro}" FontSize="18" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarTemaOscuroCommand}"/>
         </Grid>
 
-        <Grid Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Grid.Column="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="{x:Static resources:Resources.txtLenguaje}" Margin="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
-            <Button x:Name="btnEsp" Grid.Row="1" Content="{x:Static resources:Resources.btnEsp}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnEsp_Click"/>
-            <Button x:Name="btnEng" Grid.Row="2" Content="{x:Static resources:Resources.btnEng}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnEng_Click"/>
-            <Button x:Name="btnFra" Grid.Row="3" Content="{x:Static resources:Resources.btnFra}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnFra_Click"/>
-            <Button x:Name="btnAle" Grid.Row="4" Content="{x:Static resources:Resources.btnAle}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Click="btnAle_Click"/>
+            <TextBlock Grid.Row="1" FontWeight="Bold" Text="{x:Static resources:Resources.txtLenguaje}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="{DynamicResource Foreground_Primario}"/>
+            <RadioButton x:Name="btnEsp" Grid.Row="2" GroupName="Idioma" Margin="10" Content="{x:Static resources:Resources.btnEsp}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarEspCommand}"/>
+            <RadioButton x:Name="btnEng" Grid.Row="3" GroupName="Idioma" Margin="10" Content="{x:Static resources:Resources.btnEng}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarIngCommand}"/>
+            <RadioButton x:Name="btnFra" Grid.Row="4" GroupName="Idioma" Margin="10" Content="{x:Static resources:Resources.btnFra}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarFraCommand}"/>
+            <RadioButton x:Name="btnAle" Grid.Row="5" GroupName="Idioma" Margin="10" Content="{x:Static resources:Resources.btnAle}" FontSize="22" Foreground="{DynamicResource Foreground_Primario}" Command="{Binding CambiarAleCommand}"/>
         </Grid>
     </Grid>
 </UserControl>

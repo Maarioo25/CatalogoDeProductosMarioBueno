@@ -5,5 +5,18 @@
     <SolidColorBrush x:Key="Background_Secundario" Color="#cccccc"/>
     <SolidColorBrush x:Key="Background_Terciario" Color="#eeeeee"/>
     <SolidColorBrush x:Key="Foreground_Primario" Color="#222222"/>
+    <SolidColorBrush x:Key="Foreground_Secundario" Color="#0f0f0f"/>
+    <SolidColorBrush x:Key="Background_TextBox" Color="#888888"/>
+
+    <BitmapImage x:Key="IconoInicio" UriSource="/Assets/Icons/Home_Light.png"/>
+    <BitmapImage x:Key="IconoProductos" UriSource="/Assets/Icons/Productos_Light.png"/>
+    <BitmapImage x:Key="IconoCategorias" UriSource="/Assets/Icons/Categorias_Light.png"/>
+    <BitmapImage x:Key="IconoConfiguracion" UriSource="/Assets/Icons/Configuracion_Light.png"/>
+    <BitmapImage x:Key="IconoGraficos" UriSource="/Assets/Icons/Graficos_Light.png"/>
+    <BitmapImage x:Key="IconoSalir" UriSource="/Assets/Icons/Salir_Light.png"/>
+    <BitmapImage x:Key="IconoEdit" UriSource="/Assets/Icons/Edit_Light.png"/>
+    <BitmapImage x:Key="IconoMail" UriSource="/Assets/Icons/Mail_Light.png"/>
+    <BitmapImage x:Key="IconoLinkedIn" UriSource="/Assets/Icons/LinkedIn_Light.png"/>
+    <BitmapImage x:Key="IconoGitHub" UriSource="/Assets/Icons/GitHub_Light.png"/>
 
 </ResourceDictionary>
